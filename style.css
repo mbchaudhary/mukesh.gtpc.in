@@ -1,0 +1,97 @@
+/* 
+    navbar = 10vh
+    scrollber and content = 70vh
+    footer = 15vh
+*/
+
+
+*{
+    box-sizing: border-box;
+    width: 100%;
+}
+
+body{
+    background-image: url(img/Background.jpg);
+}
+
+.name{
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+    padding-left: 30px;
+}
+
+.scrollbar{
+    height: 75vh;
+    width: 15%;
+    float: left;
+}
+
+.scrollbar .menu h3{
+    margin-left: 20px;
+    padding-top: 30px;
+    font-size: 20px;
+}
+
+.scrollbar .menu a{
+    margin-left: 25px;
+    padding-top: 30px;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.scrollbar .menu a:hover{
+    text-decoration: underline;
+    color: red;
+}
+
+.content{
+    height: 75vh;
+    width: 85%;
+    float: left;
+}
+
+.content .main{
+    height: 100vh;
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 30px;
+    float: left;
+}
+
+.content .main p{
+    font-size: 30px;
+}
+
+.content .img-set{
+    height: 100vh;
+    width: 45%;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.info{
+    height: 7vh;
+    position:absolute;
+    bottom:0px;
+    width:100%;
+    padding-top: 15px;
+}
+
+.info h3{
+    text-align:right;
+    float: left;
+}
+
+
+
+/*    All Page Card    */
+
+
+.card{
+    margin-top: 30px;
+    margin-left: 30px;
+    float: left;
+}
