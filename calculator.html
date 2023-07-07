@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator</title>
+
+	<style type="text/css">
+		body{
+			background: lightgray;
+		}
+		table{
+			width: 15%;
+			height: 35vh;
+			align-items: center;
+			margin-top: 30vh;
+			border: 2px solid black;
+			border-radius: 5px;
+			box-shadow: 5px 5px 5px 0px;
+		}
+		input{
+			width: 100%;
+			height: 100%;
+			border-radius: 35px;
+			box-shadow: 3px 3px 3px 0px;
+		}
+		#ans{
+			height: 6vh;
+			text-align: right;
+			padding-right: 7px;
+			font-size: 30px;
+			color: red;
+		}
+		.ans{
+			margin-bottom: 10px;
+			background: wheat;
+			border-radius: 15px;
+		}
+	</style>
+
+</head>
+<body>
+
+	<table align="center" border="1">
+		<tr>
+			<td class="ans" id="ans" colspan="4"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="%" style="background: yellow;" onclick="addnum('%')"></td>
+			<td><input type="button" value="/" style="background: yellow;" onclick="addnum('/')"></td>
+			<td><input type="button" value="*" style="background: yellow;" onclick="addnum('*')"></td>
+			<td><input type="button" value="-" style="background: yellow;" onclick="addnum('-')"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="7" style="background: lightblue;" onclick="addnum('7')"></td>
+			<td><input type="button" value="8" style="background: lightblue;" onclick="addnum('8')"></td>
+			<td><input type="button" value="9" style="background: lightblue;" onclick="addnum('9')"></td>
+			<td rowspan="2"><input type="button" value="+" style="background: yellow;" onclick="addnum('+')"></td>
+			
+		</tr>
+		<tr>
+			<td><input type="button" value="4" style="background: lightblue;" onclick="addnum('4')"></td>
+			<td><input type="button" value="5" style="background: lightblue;" onclick="addnum('5')"></td>
+			<td><input type="button" value="6" style="background: lightblue;" onclick="addnum('6')"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="1" style="background: lightblue;" onclick="addnum('1')"></td>
+			<td><input type="button" value="2" style="background: lightblue;" onclick="addnum('2')"></td>
+			<td><input type="button" value="3" style="background: lightblue;" onclick="addnum('3')"></td>
+			<td rowspan="2"><input type="button" value="=" style="background: lightgreen;" onclick="equalnum('=')"></td>	
+		</tr>
+		<tr>
+			<td><input type="button" value="C" style="background: rgb(236, 131, 90);" onclick="clearnum('C')"></td>
+			<td><input type="button" value="0" style="background: lightblue;" onclick="addnum('0')"></td>
+			<td><input type="button" value="." style="background: lightblue;" onclick="addnum('.')"></td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+		
+		function addnum(value) {
+			result = document.getElementById('ans')
+			result.innerHTML += value
+		}
+		function equalnum(value) {
+			result = document.getElementById('ans')
+			x = result.innerHTML
+			a = eval(x)
+			result.innerHTML = a  
+		}
+		function clearnum(value){
+			result = document.getElementById('ans')
+			result.innerHTML = ''
+		}
+
+	</script>
+
+</body>
+</html>
