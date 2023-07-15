@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Signup form</title>
+	<link href="styleIndex.css" rel="stylesheet">
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+</head>
+<body>
+
+	<h1>Signup here</h1><br>
+
+	<div>
+
+	<table class="table">
+
+		<tr>
+			<td><h3>Log in to MySite</h3></td>
+		</tr>
+		<tr>
+	<td>
+	<input type="text" class="in" placeholder="Email address or phone number" id="username">
+
+		</td>
+	</tr>
+	<tr>
+	
+<td>
+	<input type="Password" class="in" placeholder="Password" id="password"><br><span style="font-size: 25px;"></span>
+</td>
+	</tr>
+
+	<tr>
+		<td><input type="button" value="Login" id="login" onclick="btn()"><br></td>
+	</tr>
+	</table>
+
+</div>
+
+<script type="text/javascript">
+	
+	var express = require("express")
+var bodyParser = require("body-parser")
+var mongoose = require("mongoose")
+
+const app = express()
+
+app.get("/", (req, res) => {
+    res.send("Hello from Server")
+}).listen(3500);
+
+console.log("listening on PORT 3000")
+
+function btn() {
+    let pattern = "^[0-9A-Za-z]{1,19}@gmail\\.com$"
+    let ruser = new RegExp(pattern);
+
+    let pattern1 = "^[0-9A-Za-z!@#$%^&*]{8,12}$"
+    let rpass = new RegExp(pattern1);
+
+    if(ruser.test(username.value)){
+        username.style.border = "2px solid green"
+            if(rpass.test(password.value)){
+                password.style.border = "2px solid green"
+                window.location.pathname = "college/folder/main.html"
+            }else{
+                alert("please Enter Ligel password");
+            }
+    }else{
+        alert("please Enter Ligel Email");
+    }
+
+    if(rpass.test(password.value)){
+        password.style.border = "2px solid green"
+            if(ruser.test(username.value)){
+                username.style.border = "2px solid green"
+            }else{
+                alert("please Enter Ligel Email");
+            }
+    }else{
+        alert("please Enter Ligel password");
+    }
+}
+
+	
+</script>
+
+</body>
+</html>
